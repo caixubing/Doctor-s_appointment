@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cxb.drapp.mapper.UserMapper">
+    <select id="getbyid" parameterType="User" resultType="User">
+        select *  from  user   where openid=#{openid}
+    </select>
+    <insert id="insert" parameterType="User">
+        insert into   user(openid,nickname,avatar_url,userkind) values (#{openid},#{nickname},#{avatar_url},#{userkind})
+    </insert>
+</mapper>
